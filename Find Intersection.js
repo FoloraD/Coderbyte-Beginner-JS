@@ -28,7 +28,7 @@ function FindIntersection(strArr) {
     // or return 'False'.
     return intersection.length > 0 ? intersection.join(',') : 'false'
     
-  
+}
      
   // keep this function call here 
-  console.log(FindIntersection(readline()));
+  console.log(FindIntersection(readline()))
