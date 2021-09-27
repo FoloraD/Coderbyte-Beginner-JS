@@ -15,13 +15,18 @@ function FindIntersection(strArr) {
     // code goes here  
 
     //1. Create 2 variables: firstString takes first element in array & secondString takes the second element in array. 
-    // Input: ["1, 3, 4, 7, 13", "1, 2, 4, 13, 15"] => firstString output: ['1, 3, 4, 7, 13']
+    //2. use split(', ') method to separate the strings at the coma and turn them into arrays
+    //Input: ["1, 3, 4, 7, 13", "1, 2, 4, 13, 15"] => firstString output: ['1, 3, 4, 7, 13'] and secondString output: ['1, 2, 4, 13, 15']
   
-    let firstString = strArr[0].split(', '); // create two variables, firstString takes first element use split(', ') method yo
+    let firstString = strArr[0].split(', ');  
     let secondString = strArr[1].split(', ');
+
+    //3.Create variable called intersection to take firstString array and use the filter() method to return numbers that exist in both arrays
     let intersection = firstString.filter(element => secondString.find(firstString => firstString === element));
-     return intersection.join(',');   
-  }
+   
+    //4. Return array if matches found.
+    // or return 'False'.
+    return intersection.length > 0 ? intersection.join(',') : 'false'
     
   
      
